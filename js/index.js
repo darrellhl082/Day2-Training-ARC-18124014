@@ -38,3 +38,18 @@ fetch("https://dummyjson.com/products?limit=20&skip=20")
         container.appendChild(item_container);
     }
   });
+
+
+document.getElementById("search-bar").addEventListener("input", function(e){
+  const keyword = e.target.value.toLowerCase();
+  const items = document.querySelectorAll(".item");
+  items.forEach(item => {
+    const title = item.querySelector(".title").textContent.toLowerCase();
+      if (title.includes(keyword)){
+        item.style.display = "";
+      }
+      else{
+        item.style.display = "none";
+      }
+  })
+})
