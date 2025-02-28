@@ -183,6 +183,10 @@ footer {
     .jumbotron .content {
         margin-top: -40px;
     }
+
+    .products{
+        padding: 20px 10px;
+    }
     .products .container .item{
        width: 45%
     }
